@@ -1,6 +1,8 @@
 import os
 import requests
 from smtplib import SMTP
+from bs4 import BeautifulSoup
+
 # from dotenv import load_dotenv
 
 # load_dotenv()
@@ -10,7 +12,6 @@ SET_PRICE = 10000000
 SMTP_GMAIL = os.environ.get("SMTP_ADDRESS")
 GMAIL = os.environ.get("EMAIL_ADDRESS")
 PASSWORD = os.environ.get("EMAIL_PASSWORD")
-from bs4 import BeautifulSoup
 
 header= {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -22,7 +23,7 @@ header= {
     "Sec-Fetch-Site": "cross-site",
     "Sec-Fetch-User": "?1",
     "Upgrade-Insecure-Requests": "1",
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36",
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
 }
 # header = {
 #     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36",
