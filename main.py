@@ -35,9 +35,9 @@ webpage = response.text
 
 soup = BeautifulSoup(webpage, "html.parser")
 price_element = soup.find(class_="a-offscreen")
-price=price_element.string.split("D")[1]
+price=price_element.getText().split("D")[1]
 
-title = soup.find(id="productTitle").string
+title = soup.find(id="productTitle").getText()
 
 if float(price.replace(",", "")) < SET_PRICE:
     with SMTP(SMTP_GMAIL, port=587) as connection:
